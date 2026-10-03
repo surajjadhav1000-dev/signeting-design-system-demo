@@ -74,6 +74,10 @@ describe.each(components)('%s component contract', (name) => {
       }
     });
 
+    it('has no leftover TODO placeholders from the template', () => {
+      expect(JSON.stringify(meta())).not.toContain('TODO');
+    });
+
     it('has complete aiHints', () => {
       const { aiHints, relationships } = meta();
       expect(aiHints.keywords.length).toBeGreaterThan(0);

@@ -6,6 +6,7 @@
   "description": "Experimental component library with design tokens, metadata, Storybook documentation, and tests.",
   "scripts": {
     "typecheck": "tsc --noEmit",
+    "new-component": "node scripts/new-component.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "storybook": "storybook dev -p 6006",
