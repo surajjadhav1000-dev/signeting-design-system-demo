@@ -1,0 +1,24 @@
+/** Typed names of the semantic button tokens, for reference in docs and tooling. */
+export const buttonTokens = [
+  '--sg-button-primary-bg',
+  '--sg-button-primary-bg-hover',
+  '--sg-button-primary-bg-active',
+  '--sg-button-primary-fg',
+  '--sg-button-secondary-bg',
+  '--sg-button-secondary-bg-hover',
+  '--sg-button-secondary-bg-active',
+  '--sg-button-secondary-fg',
+  '--sg-button-secondary-border',
+  '--sg-button-ghost-bg-hover',
+  '--sg-button-ghost-bg-active',
+  '--sg-button-ghost-fg',
+  '--sg-button-danger-bg',
+  '--sg-button-danger-bg-hover',
+  '--sg-button-danger-bg-active',
+  '--sg-button-danger-fg',
+  '--sg-button-height-sm',
+  '--sg-button-height-md',
+  '--sg-button-height-lg',
+] as const;
+
+export type ButtonToken = (typeof buttonTokens)[number];

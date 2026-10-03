@@ -1,0 +1,117 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sg-space-2);
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: var(--sg-radius-md);
+  font-family: var(--sg-font-family);
+  font-weight: var(--sg-font-weight-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--sg-duration-fast) ease,
+    border-color var(--sg-duration-fast) ease;
+}
+
+.button:focus-visible {
+  outline: var(--sg-focus-ring-width) solid var(--sg-focus-ring-color);
+  outline-offset: var(--sg-focus-ring-offset);
+}
+
+/* Sizes */
+.sm {
+  height: var(--sg-button-height-sm);
+  padding: 0 var(--sg-space-3);
+  font-size: var(--sg-font-size-sm);
+}
+.md {
+  height: var(--sg-button-height-md);
+  padding: 0 var(--sg-space-4);
+  font-size: var(--sg-font-size-md);
+}
+.lg {
+  height: var(--sg-button-height-lg);
+  padding: 0 var(--sg-space-5);
+  font-size: var(--sg-font-size-lg);
+}
+.iconOnly {
+  padding: 0;
+}
+.iconOnly.sm { width: var(--sg-button-height-sm); }
+.iconOnly.md { width: var(--sg-button-height-md); }
+.iconOnly.lg { width: var(--sg-button-height-lg); }
+
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
+
+/* Variants */
+.primary {
+  background: var(--sg-button-primary-bg);
+  color: var(--sg-button-primary-fg);
+}
+.primary:hover { background: var(--sg-button-primary-bg-hover); }
+.primary:active { background: var(--sg-button-primary-bg-active); }
+
+.secondary {
+  background: var(--sg-button-secondary-bg);
+  color: var(--sg-button-secondary-fg);
+  border-color: var(--sg-button-secondary-border);
+}
+.secondary:hover { background: var(--sg-button-secondary-bg-hover); }
+.secondary:active { background: var(--sg-button-secondary-bg-active); }
+
+.ghost {
+  background: transparent;
+  color: var(--sg-button-ghost-fg);
+}
+.ghost:hover { background: var(--sg-button-ghost-bg-hover); }
+.ghost:active { background: var(--sg-button-ghost-bg-active); }
+
+.danger {
+  background: var(--sg-button-danger-bg);
+  color: var(--sg-button-danger-fg);
+}
+.danger:hover { background: var(--sg-button-danger-bg-hover); }
+.danger:active { background: var(--sg-button-danger-bg-active); }
+
+/* Disabled */
+.button:disabled {
+  background: var(--sg-disabled-bg);
+  color: var(--sg-disabled-fg);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+/* Loading: stays focusable, keeps its colors, blocks interaction */
+.loading {
+  cursor: progress;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.spinner {
+  width: 1em;
+  height: 1em;
+  flex: none;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+  .spinner { animation-duration: 2s; }
+}

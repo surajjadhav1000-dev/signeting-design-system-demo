@@ -1,0 +1,68 @@
+/*
+ * Signeting design tokens (placeholder values — swap for brand values).
+ * Layer 1: primitives. Layer 2: semantic tokens consumed by components.
+ */
+:root {
+  /* Primitives: color */
+  --sg-color-indigo-600: #4338ca;
+  --sg-color-indigo-700: #3730a3;
+  --sg-color-indigo-800: #312e81;
+  --sg-color-indigo-50: #eef2ff;
+  --sg-color-indigo-100: #e0e7ff;
+  --sg-color-red-600: #b91c1c;
+  --sg-color-red-700: #991b1b;
+  --sg-color-red-800: #7f1d1d;
+  --sg-color-gray-50: #f9fafb;
+  --sg-color-gray-100: #f3f4f6;
+  --sg-color-gray-200: #e5e7eb;
+  --sg-color-gray-300: #d1d5db;
+  --sg-color-gray-500: #6b7280;
+  --sg-color-gray-900: #111827;
+  --sg-color-white: #ffffff;
+
+  /* Primitives: space, radius, type, motion */
+  --sg-space-1: 0.25rem;
+  --sg-space-2: 0.5rem;
+  --sg-space-3: 0.75rem;
+  --sg-space-4: 1rem;
+  --sg-space-5: 1.25rem;
+  --sg-radius-md: 0.5rem;
+  --sg-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --sg-font-size-sm: 0.875rem;
+  --sg-font-size-md: 1rem;
+  --sg-font-size-lg: 1.125rem;
+  --sg-font-weight-semibold: 600;
+  --sg-duration-fast: 120ms;
+
+  /* Semantic: focus + disabled */
+  --sg-focus-ring-color: var(--sg-color-indigo-600);
+  --sg-focus-ring-width: 3px;
+  --sg-focus-ring-offset: 2px;
+  --sg-disabled-bg: var(--sg-color-gray-200);
+  --sg-disabled-fg: var(--sg-color-gray-500);
+
+  /* Semantic: button */
+  --sg-button-primary-bg: var(--sg-color-indigo-600);
+  --sg-button-primary-bg-hover: var(--sg-color-indigo-700);
+  --sg-button-primary-bg-active: var(--sg-color-indigo-800);
+  --sg-button-primary-fg: var(--sg-color-white);
+
+  --sg-button-secondary-bg: var(--sg-color-white);
+  --sg-button-secondary-bg-hover: var(--sg-color-gray-100);
+  --sg-button-secondary-bg-active: var(--sg-color-gray-200);
+  --sg-button-secondary-fg: var(--sg-color-gray-900);
+  --sg-button-secondary-border: var(--sg-color-gray-500);
+
+  --sg-button-ghost-bg-hover: var(--sg-color-indigo-50);
+  --sg-button-ghost-bg-active: var(--sg-color-indigo-100);
+  --sg-button-ghost-fg: var(--sg-color-indigo-700);
+
+  --sg-button-danger-bg: var(--sg-color-red-600);
+  --sg-button-danger-bg-hover: var(--sg-color-red-700);
+  --sg-button-danger-bg-active: var(--sg-color-red-800);
+  --sg-button-danger-fg: var(--sg-color-white);
+
+  --sg-button-height-sm: 2rem;
+  --sg-button-height-md: 2.5rem;
+  --sg-button-height-lg: 3rem;
+}
