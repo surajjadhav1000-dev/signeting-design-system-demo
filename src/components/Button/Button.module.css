@@ -1,0 +1,120 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 0;
+  border-radius: var(--sg-radius-md);
+  font-family: var(--sg-font-family);
+  font-weight: var(--sg-font-weight-medium);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 100ms ease-out;
+}
+
+/* Figma focus: 2px surface gap + 2px focus-colored ring */
+.button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 2px var(--sg-button-focus-ring-gap),
+    0 0 0 4px var(--sg-button-focus-ring);
+}
+
+/* Sizes (Figma S / M / L) */
+.sm {
+  height: var(--sg-button-height-sm);
+  padding: 0 var(--sg-button-padding-x-sm);
+  gap: var(--sg-button-gap-sm);
+  font-size: var(--sg-font-size-200);
+  line-height: var(--sg-font-line-height-100);
+}
+.md {
+  height: var(--sg-button-height-md);
+  padding: 0 var(--sg-button-padding-x-md);
+  gap: var(--sg-button-gap-md);
+  font-size: var(--sg-font-size-300);
+  line-height: var(--sg-font-line-height-200);
+}
+.lg {
+  height: var(--sg-button-height-lg);
+  padding: 0 var(--sg-button-padding-x-lg);
+  gap: var(--sg-button-gap-lg);
+  font-size: var(--sg-font-size-300);
+  line-height: var(--sg-font-line-height-200);
+}
+.iconOnly {
+  padding: 0;
+}
+.iconOnly.sm { width: var(--sg-button-height-sm); }
+.iconOnly.md { width: var(--sg-button-height-md); }
+.iconOnly.lg { width: var(--sg-button-height-lg); }
+
+.fullWidth {
+  display: flex;
+  width: 100%;
+}
+
+/* Variants */
+.primary {
+  background: var(--sg-button-primary-bg);
+  color: var(--sg-button-primary-fg);
+}
+.primary:hover { background: var(--sg-button-primary-bg-hover); }
+.primary:active { background: var(--sg-button-primary-bg-active); }
+
+.secondary {
+  background: var(--sg-button-secondary-bg);
+  color: var(--sg-button-secondary-fg);
+}
+.secondary:hover { background: var(--sg-button-secondary-bg-hover); }
+.secondary:active { background: var(--sg-button-secondary-bg-active); }
+
+.ghost {
+  background: transparent;
+  color: var(--sg-button-ghost-fg);
+}
+.ghost:hover { background: var(--sg-button-ghost-bg-hover); }
+.ghost:active { background: var(--sg-button-ghost-bg-active); }
+
+.danger {
+  background: var(--sg-button-danger-bg);
+  color: var(--sg-button-danger-fg);
+}
+.danger:hover { background: var(--sg-button-danger-bg-hover); }
+.danger:active { background: var(--sg-button-danger-bg-active); }
+
+/* Disabled */
+.button:disabled {
+  background: var(--sg-button-disabled-bg);
+  color: var(--sg-button-disabled-fg);
+  cursor: not-allowed;
+}
+
+/* Loading: stays focusable, keeps its colors, blocks interaction */
+.loading {
+  cursor: progress;
+}
+
+.icon {
+  display: inline-flex;
+  flex: none;
+}
+
+.spinner {
+  width: var(--sg-button-spinner-size);
+  height: var(--sg-button-spinner-size);
+  flex: none;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; }
+  .spinner { animation-duration: 2s; }
+}

@@ -1,0 +1,59 @@
+import { Meta, Canvas, Controls } from '@storybook/addon-docs/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} name="Docs" />
+
+# Button
+
+Triggers an action in the current page (submit, save, open a dialog). For navigation to another page, use a link.
+
+<Canvas of={ButtonStories.Playground} />
+<Controls of={ButtonStories.Playground} />
+
+## Variants
+
+<Canvas of={ButtonStories.Variants} />
+
+| Variant | Use for |
+| --- | --- |
+| `primary` | The single main action in a view |
+| `secondary` | Alternative or supporting actions |
+| `ghost` | Low-emphasis actions, toolbars |
+| `danger` | Destructive actions (delete, remove) |
+
+## Sizes
+
+<Canvas of={ButtonStories.Sizes} />
+
+## States
+
+Hover, active and `:focus-visible` are handled with CSS. `disabled` uses the native attribute. `loading` shows a spinner, sets `aria-busy`, ignores clicks, and stays focusable so keyboard users don't lose their place.
+
+<Canvas of={ButtonStories.States} />
+
+## Icons
+
+Icons are decorative and hidden from assistive tech. An icon-only button **must** have an `aria-label` (enforced by the types).
+
+<Canvas of={ButtonStories.WithIcons} />
+
+## Do and don't
+
+- **Do** use one `primary` button per view.
+- **Do** write labels as verbs: "Save changes", not "OK".
+- **Don't** use a button for navigation.
+- **Don't** rely on color alone; the label must carry the meaning.
+
+## Accessibility
+
+- Native `<button>`, so Enter and Space work with no extra code.
+- Defaults to `type="button"` to avoid accidental form submits.
+- Visible focus ring on keyboard focus (2px gap + 2px ring, per Figma).
+- Text colors meet WCAG AA contrast against their backgrounds (disabled is exempt).
+- The spinner slows down under `prefers-reduced-motion`.
+
+## Design tokens
+
+Designed in Figma (Signeting Design System — Foundations, node `19:123`): `primary` and `secondary`, sizes S/M/L (28/32/36px). `ghost`, `danger` and icons are code-only for now.
+
+Component tokens (`--sg-button-*`) live in `Button.tokens.css`; shared primitives live in `src/tokens/tokens.css`. Override them to retheme.

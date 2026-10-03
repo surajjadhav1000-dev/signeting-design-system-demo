@@ -1,0 +1,17 @@
+/* Component-scoped tokens for Input. Shared primitives live in src/tokens/tokens.css. */
+:root {
+  --sg-input-bg: var(--sg-color-white);
+  --sg-input-fg: var(--sg-color-gray-900);
+  --sg-input-placeholder: var(--sg-color-gray-500);
+  --sg-input-border: var(--sg-color-gray-500);
+  --sg-input-border-hover: var(--sg-color-gray-900);
+  --sg-input-border-focus: var(--sg-color-indigo-600);
+  --sg-input-border-error: var(--sg-color-red-600);
+  --sg-input-label-fg: var(--sg-color-gray-900);
+  --sg-input-hint-fg: var(--sg-color-gray-500);
+  --sg-input-error-fg: var(--sg-color-red-600);
+
+  --sg-input-height-sm: 2rem;
+  --sg-input-height-md: 2.5rem;
+  --sg-input-height-lg: 3rem;
+}
