@@ -14,4 +14,6 @@ npm run build-storybook
 ## Structure
 
 - `src/tokens/` — design tokens (`tokens.css`, typed names in `tokens.ts`)
-- `src/components/Button/` — component, CSS Module, stories, MDX docs, tests, `Button.metadata.json`
+- `src/meta.types.ts` — `ComponentMeta`, the canonical metadata contract
+- `src/components/<Name>/` — every component ships the full set: `<Name>.tsx`, `<Name>.meta.ts` (typed `ComponentMeta`), `<Name>.tokens.css`, `<Name>.stories.tsx`, `<Name>.test.tsx`, `index.ts`
+- `src/components/components.contract.test.ts` — fails if any component is missing a file or has inconsistent metadata
