@@ -1,26 +1,51 @@
-/* Component-scoped tokens for Button. Shared primitives live in src/tokens/tokens.css. */
+/*
+ * Component-scoped tokens for Button. Shared primitives live in src/tokens/tokens.css.
+ * Figma: Signeting Design System — Foundations, node 19:123 (Primary, Secondary).
+ * Ghost and danger have no Figma design yet; they are code-only extensions.
+ */
 :root {
-  --sg-button-primary-bg: var(--sg-color-indigo-600);
-  --sg-button-primary-bg-hover: var(--sg-color-indigo-700);
-  --sg-button-primary-bg-active: var(--sg-color-indigo-800);
-  --sg-button-primary-fg: var(--sg-color-white);
+  /* Primary (Figma) */
+  --sg-button-primary-bg: var(--sg-color-background-brand-bold);
+  --sg-button-primary-bg-hover: var(--sg-color-background-brand-bold-hovered);
+  --sg-button-primary-bg-active: var(--sg-color-background-brand-bold-pressed);
+  --sg-button-primary-fg: var(--sg-color-text-inverse);
 
-  --sg-button-secondary-bg: var(--sg-color-white);
-  --sg-button-secondary-bg-hover: var(--sg-color-gray-100);
-  --sg-button-secondary-bg-active: var(--sg-color-gray-200);
-  --sg-button-secondary-fg: var(--sg-color-gray-900);
-  --sg-button-secondary-border: var(--sg-color-gray-500);
+  /* Secondary (Figma) */
+  --sg-button-secondary-bg: var(--sg-color-background-brand-subtlest);
+  --sg-button-secondary-bg-hover: var(--sg-color-background-brand-subtlest-hovered);
+  --sg-button-secondary-bg-active: var(--sg-color-background-brand-subtlest-pressed);
+  --sg-button-secondary-fg: var(--sg-color-text-brand);
 
-  --sg-button-ghost-bg-hover: var(--sg-color-indigo-50);
-  --sg-button-ghost-bg-active: var(--sg-color-indigo-100);
-  --sg-button-ghost-fg: var(--sg-color-indigo-700);
+  /* Ghost (code-only): derived from the Figma brand tokens */
+  --sg-button-ghost-bg-hover: var(--sg-color-background-brand-subtlest);
+  --sg-button-ghost-bg-active: var(--sg-color-background-brand-subtlest-hovered);
+  --sg-button-ghost-fg: var(--sg-color-text-brand);
 
+  /* Danger (code-only) */
   --sg-button-danger-bg: var(--sg-color-red-600);
   --sg-button-danger-bg-hover: var(--sg-color-red-700);
   --sg-button-danger-bg-active: var(--sg-color-red-800);
-  --sg-button-danger-fg: var(--sg-color-white);
+  --sg-button-danger-fg: var(--sg-color-text-inverse);
 
-  --sg-button-height-sm: 2rem;
-  --sg-button-height-md: 2.5rem;
-  --sg-button-height-lg: 3rem;
+  /* Disabled (Figma) */
+  --sg-button-disabled-bg: var(--sg-color-background-disabled);
+  --sg-button-disabled-fg: var(--sg-color-text-disabled);
+
+  /* Focus ring (Figma): 2px surface gap, then 2px focus color */
+  --sg-button-focus-ring-gap: var(--sg-color-surface-default);
+  --sg-button-focus-ring: var(--sg-color-border-focused);
+
+  /* Spinner follows the label color (Figma: icon/inverse on primary, icon/brand on light) */
+  --sg-button-spinner-size: 1rem;
+
+  /* Size scale (Figma S / M / L) */
+  --sg-button-height-sm: var(--sg-size-control-sm);
+  --sg-button-height-md: var(--sg-size-control-md);
+  --sg-button-height-lg: var(--sg-size-control-lg);
+  --sg-button-padding-x-sm: var(--sg-space-150);
+  --sg-button-padding-x-md: var(--sg-space-150);
+  --sg-button-padding-x-lg: var(--sg-space-200);
+  --sg-button-gap-sm: var(--sg-space-075);
+  --sg-button-gap-md: var(--sg-space-100);
+  --sg-button-gap-lg: var(--sg-space-100);
 }

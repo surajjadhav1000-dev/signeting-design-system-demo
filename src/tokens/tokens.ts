@@ -8,7 +8,6 @@ export const buttonTokens = [
   '--sg-button-secondary-bg-hover',
   '--sg-button-secondary-bg-active',
   '--sg-button-secondary-fg',
-  '--sg-button-secondary-border',
   '--sg-button-ghost-bg-hover',
   '--sg-button-ghost-bg-active',
   '--sg-button-ghost-fg',
@@ -16,9 +15,20 @@ export const buttonTokens = [
   '--sg-button-danger-bg-hover',
   '--sg-button-danger-bg-active',
   '--sg-button-danger-fg',
+  '--sg-button-disabled-bg',
+  '--sg-button-disabled-fg',
+  '--sg-button-focus-ring-gap',
+  '--sg-button-focus-ring',
+  '--sg-button-spinner-size',
   '--sg-button-height-sm',
   '--sg-button-height-md',
   '--sg-button-height-lg',
+  '--sg-button-padding-x-sm',
+  '--sg-button-padding-x-md',
+  '--sg-button-padding-x-lg',
+  '--sg-button-gap-sm',
+  '--sg-button-gap-md',
+  '--sg-button-gap-lg',
 ] as const;
 
 export type ButtonToken = (typeof buttonTokens)[number];

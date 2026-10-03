@@ -27,12 +27,41 @@
   --sg-space-4: 1rem;
   --sg-space-5: 1.25rem;
   --sg-radius-md: 0.5rem;
-  --sg-font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --sg-font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --sg-font-size-sm: 0.875rem;
   --sg-font-size-md: 1rem;
   --sg-font-size-lg: 1.125rem;
   --sg-font-weight-semibold: 600;
   --sg-duration-fast: 120ms;
+
+  /* Figma foundations (source of truth: Signeting Design System — Foundations) */
+  --sg-color-background-brand-bold: #1369e8;
+  --sg-color-background-brand-bold-hovered: #0f55c4;
+  --sg-color-background-brand-bold-pressed: #0848a4;
+  --sg-color-background-brand-subtlest: #eff7ff;
+  --sg-color-background-brand-subtlest-hovered: #dbeeff;
+  --sg-color-background-brand-subtlest-pressed: #bfddff;
+  --sg-color-background-disabled: rgb(14 18 23 / 4%);
+  --sg-color-text-inverse: #ffffff;
+  --sg-color-text-brand: #0f55c4;
+  --sg-color-text-disabled: #9fa5af;
+  --sg-color-icon-inverse: #ffffff;
+  --sg-color-icon-brand: #1369e8;
+  --sg-color-border-focused: #3284ff;
+  --sg-color-surface-default: #ffffff;
+
+  --sg-space-075: 0.375rem;
+  --sg-space-100: 0.5rem;
+  --sg-space-150: 0.75rem;
+  --sg-space-200: 1rem;
+  --sg-size-control-sm: 1.75rem;
+  --sg-size-control-md: 2rem;
+  --sg-size-control-lg: 2.25rem;
+  --sg-font-size-200: 0.75rem;
+  --sg-font-size-300: 0.875rem;
+  --sg-font-line-height-100: 1rem;
+  --sg-font-line-height-200: 1.25rem;
+  --sg-font-weight-medium: 500;
 
   /* Semantic: focus + disabled */
   --sg-focus-ring-color: var(--sg-color-indigo-600);

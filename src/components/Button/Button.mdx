@@ -48,10 +48,12 @@ Icons are decorative and hidden from assistive tech. An icon-only button **must*
 
 - Native `<button>`, so Enter and Space work with no extra code.
 - Defaults to `type="button"` to avoid accidental form submits.
-- Visible focus ring (3px, offset) on keyboard focus.
+- Visible focus ring on keyboard focus (2px gap + 2px ring, per Figma).
 - Text colors meet WCAG AA contrast against their backgrounds (disabled is exempt).
 - The spinner slows down under `prefers-reduced-motion`.
 
 ## Design tokens
+
+Designed in Figma (Signeting Design System — Foundations, node `19:123`): `primary` and `secondary`, sizes S/M/L (28/32/36px). `ghost`, `danger` and icons are code-only for now.
 
 Component tokens (`--sg-button-*`) live in `Button.tokens.css`; shared primitives live in `src/tokens/tokens.css`. Override them to retheme.
